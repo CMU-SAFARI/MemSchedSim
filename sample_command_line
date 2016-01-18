@@ -1,0 +1,13 @@
+FRFCFS scheduler:
+
+mono sim.exe -config configs/frfcfs.cfg -N 24 -workload workloads/workloads_24app 1 -mem.channel_max 4 -mem.rank_max 1 -output <stats_output_file_name> -sched.sched_algo FRFCFS -sim_cycle_max 100000000
+
+ATLAS scheduler:
+
+mono sim.exe -config configs/atlas.cfg -N 24 -workload workloads/workloads_24app 1 -mem.channel_max 4 -mem.rank_max 1 -output <stats_output_file_name> -sched.sched_algo ATLAS -sim_cycle_max 100000000
+
+BLISS scheduler:
+
+mono sim.exe -config configs/frfcfs.cfg -N 24 -workload workloads/workloads_24app 1 -mem.channel_max 4 -mem.rank_max 1 -output <stats_output_file_name> -sched.sched_algo BLISS -sched.shuffle_cycles 10000 -sim_cycle_max 100000000 
+
+
